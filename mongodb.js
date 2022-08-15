@@ -9,20 +9,21 @@ MongoClient.connect(connectionUrl,{useNewUrlParser:true},(error,client)=>{
         return console.log('there is some problem to connect to database!');
     }
     const db=client.db(dataBaseName)
-    // db.collection('myDatabase').findOne({completed:true},(err,user)=>{
-    //     if(err){
-    //         return console.log('there is some error occured during the find');
-    //     }
-    //     console.log(user);
+    // db.collection('myDatabase').updateOne({age:22},{$set:{name:'amit'}})
+    // .then((data)=>{
+    //     console.log(data);
     // })
-    
-    // that give the cursore 
-    db.collection('myDatabase').find({completed:false}).count((err,count)=>{
-        console.log(count);
-    })
-    db.collection('myDatabase').find({completed:false}).toArray((err,users)=>{
-        console.log(users);
-    })
+    // .catch((err)=>{
+    //     console.log(err);
+    // })
+
+    // db.collection('myDatabase').updateMany({age:23},{$set:{age:22}})
+    // .then((data)=>{
+    //     console.log(data);
+    // })
+    // .catch((err)=>{
+    //     console.log(err);
+    // })
 
     
 
