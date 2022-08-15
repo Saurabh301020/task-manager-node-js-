@@ -9,21 +9,9 @@ MongoClient.connect(connectionUrl,{useNewUrlParser:true},(error,client)=>{
         return console.log('there is some problem to connect to database!');
     }
     const db=client.db(dataBaseName)
-    // db.collection('myDatabase').updateOne({age:22},{$set:{name:'amit'}})
-    // .then((data)=>{
-    //     console.log(data);
-    // })
-    // .catch((err)=>{
-    //     console.log(err);
-    // })
-
-    // db.collection('myDatabase').updateMany({age:23},{$set:{age:22}})
-    // .then((data)=>{
-    //     console.log(data);
-    // })
-    // .catch((err)=>{
-    //     console.log(err);
-    // })
+    // db.collection('myDatabase').deleteOne({name:'saurabh'})
+    db.collection('myDatabase').deleteMany({name:'gaurav'})
+    
 
     
 
